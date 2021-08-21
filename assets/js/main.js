@@ -16,9 +16,9 @@ const clock = () => {
 
 setInterval(clock, 1000);
 
+const textClock = document.getElementById("text-clock");
 const textHour = document.getElementById("text-hour");
 const textMinutes = document.getElementById("text-minutes");
-const textAmPm = document.getElementById("text-ampm");
 const textDay = document.getElementById("text-day");
 const textMonth = document.getElementById("text-month");
 const textYear = document.getElementById("text-year");
@@ -34,12 +34,13 @@ const clockText = () => {
     let month = date.getMonth();
     let year = date.getFullYear();
 
+    textClock.dataset.ampm = ampm;
     textHour.innerHTML = hh === 0 ? 12 : hh < 10 ? `0${hh}` : hh;
     textMinutes.innerHTML = mm < 10 ? `:0${mm}` : `:${mm}`;
-    textAmPm.innerHTML = ampm;
+    textClock.style.before = ampm;
 
-    textDay.innerHTML = day + " /";
-    textMonth.innerHTML = Number(month + 1) + " /";
+    textDay.innerHTML = day;
+    textMonth.innerHTML = Number(month + 1);
     textYear.innerHTML = year;
 };
 
