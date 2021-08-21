@@ -39,7 +39,7 @@ const clockText = () => {
     textAmPm.innerHTML = ampm;
 
     textDay.innerHTML = day + " /";
-    textMonth.innerHTML = month + " /";
+    textMonth.innerHTML = Number(month + 1) + " /";
     textYear.innerHTML = year;
 };
 
