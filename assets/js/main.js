@@ -37,7 +37,6 @@ const clockText = () => {
     textClock.dataset.ampm = ampm;
     textHour.innerHTML = hh === 0 ? 12 : hh < 10 ? `0${hh}` : hh;
     textMinutes.innerHTML = mm < 10 ? `:0${mm}` : `:${mm}`;
-    textClock.style.before = ampm;
 
     textDay.innerHTML = day;
     textMonth.innerHTML = Number(month + 1);
